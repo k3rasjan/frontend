@@ -4,7 +4,7 @@ import Root from "./Root.jsx";
 import Login from "./authentication/Login.jsx";
 import Register from "./authentication/Register.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Creator from "./Creator.jsx";
+import Creator from "./creator/Creator.jsx";
 
 const router = createBrowserRouter([
     {

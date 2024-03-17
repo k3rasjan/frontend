@@ -3,10 +3,13 @@ import { Label, Input } from "../helpers/forms.jsx";
 import { Link } from "react-router-dom";
 import logo from "/public/logoBlue.svg";
 import logoBig from "/public/logoBlueBig.svg";
-import { redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Login() {
     let url = Config.host + "/login/";
+    const [shouldRedirect, setShouldRedirect] = useState([]);
+
     function handleSubmit(e) {
         e.preventDefault();
         let data = new FormData(e.target);
@@ -24,7 +27,7 @@ export default function Login() {
             if (response.ok) {
                 response.json().then((data) => {
                     alert(data.message);
-                    redirect("/");
+                    setShouldRedirect([<Navigate to="/" replace />]);
                 });
             } else {
                 response.json().then((data) => {
@@ -33,8 +36,12 @@ export default function Login() {
             }
         });
     }
+
     return (
         <div className="bg-neutral-950 w-screen h-screen">
+            {shouldRedirect.map((e, index) => {
+                return <div key={index}>{e}</div>;
+            })}
             <main className="bg-neutral-900 h-screen flex flex-col w-[500px] rounded-r-3xl p-10 relative z-10">
                 <h1 className="text-sky-200 text-7xl font-bold">Sign In</h1>
                 <img src={logo} alt="Logo" className="absolute top-6 right-6" />
