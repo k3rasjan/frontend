@@ -27,7 +27,7 @@ export default function Register() {
             if (response.ok) {
                 response.json().then((data) => {
                     alert(data.message);
-                    setShouldRedirect([<Navigate to="/" replace />]);
+                    setShouldRedirect([<Navigate to="/login/" replace />]);
                 });
             } else {
                 response.json().then((data) => {
