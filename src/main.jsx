@@ -5,6 +5,7 @@ import Login from "./authentication/Login.jsx";
 import Register from "./authentication/Register.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Creator from "./creator/Creator.jsx";
+import Lesson from "./lesson/Lesson.jsx";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
             {
                 path: "/lesson-creator/",
                 element: <Creator />,
+            },
+            {
+                path: "/lesson/",
+                element: <Lesson />,
             },
         ],
     },

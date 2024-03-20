@@ -3,7 +3,7 @@ import { Label, Input } from "../helpers/forms.jsx";
 import { Link } from "react-router-dom";
 import logo from "/public/logoBlue.svg";
 import logoBig from "/public/logoBlueBig.svg";
-import { redirect } from "react-router-dom";
+
 import { Navigate } from "react-router-dom";
 import { useState } from "react";
 
