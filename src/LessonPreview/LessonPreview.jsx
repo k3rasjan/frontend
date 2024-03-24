@@ -2,34 +2,54 @@ import "./LessonPreview.css";
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
 
-function LessonPreview({ resp }) {
-    /*
-    tags,
-    author,
-    rating,
-    title,
-    description,
-    thumbnail,
-    */
-    let tags = resp[0].tags,
-        author = resp[0].author,
-        rating = resp[0].age_rating,
-        title = resp[0].title,
-        description = resp[0].description,
-        thumbnail = resp[0].thumbnail;
-
+function LessonPreview(/*{ resp }*/) {
     const [n, setN] = useState(0);
     const [shouldRedirect, setShouldRedirect] = useState([]);
+    const resp = [
+        {
+            tags: [{ tag: "Cooking" }],
+            author: "John Doe",
+            age_rating: 7,
+            title: "Scrambled Eggs",
+            description:
+                "Learn how to make the perfect scrambled eggs with this simple recipe.",
+            thumbnail: "lesson.jpg",
+        },
+    ];
+
+    let tags = resp[n].tags,
+        author = resp[n].author,
+        rating = resp[n].age_rating,
+        title = resp[n].title,
+        description = resp[n].description,
+        thumbnail = resp[n].thumbnail;
+
+    console.log(thumbnail);
 
     function handleClick() {
         setShouldRedirect([<Navigate to="/lesson/" replace />]);
+    }
+
+    function handleLeft() {
+        if (n > 0) setN((n) => n - 1);
+    }
+
+    function handleRight() {
+        if (n < resp.length - 1) setN((n) => n + 1);
     }
 
     return (
         <>
             <div
                 className="lessonPreview"
-                style={{ backgroundImage: `../../public/${title}.jpg` }}
+                style={{
+                    backgroundImage: `linear-gradient(
+                    to bottom,
+                    rgba(23, 23, 23, 0.71),
+                    rgba(23, 23, 23)
+                ),
+                url(../../public/${thumbnail})`,
+                }}
             >
                 <div className="color"></div>
                 {shouldRedirect.map((e, index) => {
@@ -41,7 +61,7 @@ function LessonPreview({ resp }) {
                             <p>Tags</p>
                             <div className="tags-2">
                                 {tags.map((tag) => {
-                                    return <p key={tag}>{tag}</p>;
+                                    return <p key={tag}>{tag.tag}</p>;
                                 })}
                             </div>
                         </div>
@@ -74,8 +94,8 @@ function LessonPreview({ resp }) {
                     </div>
                 </div>
                 <div className="buttons">
-                    <button>&lt;</button>
-                    <button>&gt;</button>
+                    <button onClick={handleLeft}>&lt;</button>
+                    <button onClick={handleRight}>&gt;</button>
                 </div>
             </div>
         </>

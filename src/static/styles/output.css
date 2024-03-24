@@ -604,6 +604,10 @@ video {
   margin: 0px;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -735,6 +739,10 @@ video {
   border-bottom-right-radius: 0.75rem;
 }
 
+.rounded-tl-3xl {
+  border-top-left-radius: 1.5rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -765,11 +773,6 @@ video {
 .bg-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 64 64 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-900 {

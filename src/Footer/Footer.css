@@ -1,0 +1,27 @@
+footer
+{
+    background: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.img-container
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ffffff;
+}
+.img-container > img
+{
+    width: 100px;
+    margin: 10px;
+}
+.creator-container
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #cecece;
+    border-top: 1px solid #ffffff;
+}

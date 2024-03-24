@@ -1,7 +1,9 @@
 import menuArrow from "/public/menuArrow.svg";
 export function MenuElelement({ subtitle }) {
-    <div className="flex gap-1">
-        {menuArrow}
-        <p>{subtitle}</p>
-    </div>;
+    return (
+        <div className="flex gap-1 ml-3 text-neutral-400">
+            <img src={menuArrow} alt="menuArrow" />
+            <p>{subtitle}</p>
+        </div>
+    );
 }

@@ -1,5 +1,4 @@
-.lessonPreview
-{
+.lessonPreview {
     /*background-image: url('../../public/lesson.jpg');*/
     background-repeat: no-repeat;
     background-position: left 40%;
@@ -12,8 +11,7 @@
     height: 600px;
     color: white;
 }
-.color
-{
+.color {
     width: 100%;
     height: 601px;
     position: absolute;
@@ -22,37 +20,32 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
-.lessonPreview-2
-{
+.lessonPreview-2 {
     width: 50%;
     height: auto;
     display: flex;
     flex-direction: column;
     margin: 50px;
 }
-.first-line
-{
+.first-line {
     display: flex;
     align-items: center;
     width: 100%;
     height: 40px;
 }
-.tags
-{
+.tags {
     display: flex;
     flex-direction: column;
     width: auto;
     height: auto;
     margin-right: 20px;
 }
-.tags > p
-{
-    color: #A3A3A3;
+.tags > p {
+    color: #a3a3a3;
     text-decoration: underline;
     margin-left: 10px;
 }
-.tags-2
-{
+.tags-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,79 +53,67 @@
     width: auto;
     height: auto;
 }
-.tags-2 > p
-{
+.tags-2 > p {
     margin: 5px;
     padding: 1px 4px;
-    border: 1px solid #A3A3A3;
+    border: 1px solid #a3a3a3;
     border-radius: 20px;
-    color: #A3A3A3;
+    color: #a3a3a3;
 }
-.author
-{
+.author {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
-.author > p:nth-of-type(1)
-{
-    color: #A3A3A3;
+.author > p:nth-of-type(1) {
+    color: #a3a3a3;
     text-decoration: underline;
 }
-.author > p:nth-of-type(2)
-{
+.author > p:nth-of-type(2) {
     color: black;
     padding: 1px 10px;
-    background-color: #BAE6FD;
+    background-color: #bae6fd;
     border-radius: 20px;
 }
-.rating
-{
+.rating {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
-.rating > p:nth-of-type(1)
-{
-    color: #A3A3A3;
+.rating > p:nth-of-type(1) {
+    color: #a3a3a3;
     text-decoration: underline;
 }
-.rating > p:nth-of-type(2)
-{
+.rating > p:nth-of-type(2) {
     color: black;
     padding: 1px 10px;
-    background-color: #FECACA;
+    background-color: #fecaca;
     border-radius: 20px;
 }
-.second-line
-{
+.second-line {
     display: flex;
     align-items: center;
     width: 100%;
     height: 80px;
 }
-.second-line > h1
-{
+.second-line > h1 {
     font-size: 40px;
     font-weight: bold;
     margin: 10px 20px;
 }
-.second-line > button
-{
+.second-line > button {
     color: black;
-    background-color: #BAE6FD;
+    background-color: #bae6fd;
     width: 150px;
     height: 40px;
     border-radius: 10px;
     margin-top: 10px;
 }
-.third-line
-{
+.third-line {
     width: 100%;
-    color: #A3A3A3;
+    color: #a3a3a3;
 }
-.buttons
-{
+.buttons {
     display: flex;
     justify-content: end;
     align-items: end;
@@ -140,9 +121,8 @@
     height: auto;
     padding: 50px;
 }
-.buttons > button
-{
-    background-color: rgb(38, 38, 38);
+.buttons > button {
+    background-color: #262626;
     margin: 10px;
     width: 70px;
     height: 70px;
@@ -150,4 +130,19 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+}
+.buttons > button:hover {
+    background-color: #363636;
+}
+.buttons > button:active {
+    background-color: #262626;
+}
+
+.inLesson {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(23, 23, 23, 0.71),
+            rgba(23, 23, 23)
+        ),
+        url("/public/Scrambled_eggs.jpg");
 }
