@@ -17,7 +17,7 @@ export default function Creator() {
         let newTagList = tagList;
         console.log(newTagList);
         let index = newTagList.indexOf(tag);
-        newTagList.splice(index, 1);
+        newTagList.pop(index, 1);
         setTags([...newTagList]);
     }
 
